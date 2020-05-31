@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/assets/label.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+  <title>Fancy Weather</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <button class="btn btn-secondary btn_reload">
+          <span class="spinner-border spinner-border-sm loader" role="status" aria-hidden="true"></span>
+          Reload
+        </button>
+        <select class="custom-select">
+          <option value="1" selected>EN</option>
+          <option value="2" disabled>BE</option>
+          <option value="3" disabled>RU</option>
+        </select>
+        <div class="btn-group btn_temp btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-degree btn-secondary active">
+            <input type="radio" autocomplete="off" name="radioname" value='c' checked> ºC </input>
+          </label>
+          <label class="btn btn-degree btn-secondary">
+            <input type="radio" autocomplete="off" name="radioname" value='f'> ºF </input>
+          </label>
+        </div>
+      </div>
+      <form>
+        <div class="form-search form-group">
+          <input type="text" class="search_inp form-control" placeholder="🔍 Search by city...">
+          <div class="spinner-border text-danger loader_search" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="alert alert-danger" role="alert">
+            <span>⚠️ </span>You need to fill in the search field
+          </div>
+          <button type="submit" class="btn btn-search btn-secondary">Search</button>
+        </div>        
+      </form>
+    </header>
+
+    <div class='cont'>
+      <!-- <div class='city'>Pastavy, BY</div>
+      <div class='date_time'> Sat May 23 2020 16:57:31 GMT+0300 (Moscow Standard Time)</div>
+      <div class='temp'>
+        <spaN> 15</span>º 
+          <div class='sprite_clear'></div>  
+          <div class='params'>
+          <div class='weather_state'>Clear</div>
+          <div>FEELS LIKE: <span class='current_weather_fl'>13</span>º </div>
+          <div>WIND: 2 m/s </div>
+          <div>HUMIDITY: 45%</div>
+        </div>
+      </div> -->
+    </div>
+    <div class='futureWeather'>
+
+
+      <!-- <div class="futureWeather_item">
+        
+          <div class="futureWeather_day">Sunday</div>
+          <div class="futureWeather_temp"> <span>12</span>º</div>
+          <div class='sprite_mini_clouds'></div>  
+      </div>
+      <div class="futureWeather_item">
+
+          <div class="futureWeather_day">Monday</div>
+          <div class="futureWeather_temp"> <span>13</span>º</div>
+          <div class='sprite_mini_clear'></div>  
+      </div>
+      <div class="futureWeather_item">
+
+          <div class="futureWeather_day">Tuesday</div>
+          <div class="futureWeather_temp"> <span>15</span>º</div>
+          <div class='sprite_mini_rain'></div>  
+      </div> -->
+
+     
+    </div>
+    <div class='map_cont' id='map'></div>
+  </div>  
+
+
+</body>
+
+</html>
